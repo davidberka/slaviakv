@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.fb_icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: $white;
+    -webkit-mask: url(../img/fb.svg) no-repeat center;
+    mask: url(../img/fb.svg) no-repeat center;
+    
+    &.red {
+        background-color: $primaryRed;
+    }
+}
+
+.ig_icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: $white;
+    -webkit-mask: url(../img/ig.svg) no-repeat center;
+    mask: url(../img/ig.svg) no-repeat center;
+    
+    &.red {
+        background-color: $primaryRed;
+    }
+}
+
+.yt_icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: $white;
+    -webkit-mask: url(../img/yt.svg) no-repeat center;
+    mask: url(../img/yt.svg) no-repeat center;
+    
+    &.red {
+        background-color: $primaryRed;
+    }
+}
+
+.arrow {
+    width: .625rem;
+    height: .5rem;
+    background-color: $primaryRed;
+    -webkit-mask: url(../img/arrow.svg) no-repeat center;
+    mask: url(../img/arrow.svg) no-repeat center;
+}
+
+img {
+    max-width: 100%;
+}

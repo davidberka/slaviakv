@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.fb_icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #fff;
+  -webkit-mask: url(../img/fb.svg) no-repeat center;
+  mask: url(../img/fb.svg) no-repeat center;
+}
+.fb_icon.red {
+  background-color: #E30613;
+}
+
+.ig_icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #fff;
+  -webkit-mask: url(../img/ig.svg) no-repeat center;
+  mask: url(../img/ig.svg) no-repeat center;
+}
+.ig_icon.red {
+  background-color: #E30613;
+}
+
+.yt_icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #fff;
+  -webkit-mask: url(../img/yt.svg) no-repeat center;
+  mask: url(../img/yt.svg) no-repeat center;
+}
+.yt_icon.red {
+  background-color: #E30613;
+}
+
+.arrow {
+  width: 0.625rem;
+  height: 0.5rem;
+  background-color: #E30613;
+  -webkit-mask: url(../img/arrow.svg) no-repeat center;
+  mask: url(../img/arrow.svg) no-repeat center;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*# sourceMappingURL=styles.css.map */
