@@ -28,12 +28,6 @@
         object-fit: cover;
     }
 
-    &.primary .content {
-        span {
-            font-size: .875rem;
-        }
-    }
-
     &.secondary .content {
         .link_button {
             font-size: .75rem;
@@ -60,6 +54,261 @@
     }
 }
 
+.hp_matches {
+    background: $gray;
+}
+
 .hp_matches_container {
-    padding: $smallSectionPadding;
+    padding: $smallSectionSpacing;
+}
+
+.hp_matches_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:nth-child(1) {
+        padding-bottom: 2rem;
+        border-bottom: 1px solid rgba($color: $primaryRed, $alpha: .05);
+    }
+
+    &:nth-child(2) {
+        padding-top: 2rem;
+    }
+
+    .dateRoundInfo {
+        color: $primaryRed;
+    }
+
+    .teams {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: .75rem;
+
+        img {
+            width: 4rem;
+            height: 4rem;
+            object-fit: contain;
+        }
+
+        .team_names {
+            text-align: center;
+
+            h4 {
+                font-weight: 400;
+
+                &:nth-child(1) {
+                    margin-bottom: .25rem;
+                }
+
+                &.highlighted {
+                    font-weight: 700;
+                }
+            }
+        }
+
+    }
+
+    h1 {
+        font-weight: 800;
+
+        &.win {
+            color: #05B334;
+        }
+    }
+
+    .buttons {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+}
+
+.multi {
+    border-bottom: 4px solid rgba($color: $primaryRed, $alpha: .05);
+}
+
+.multi_container {
+    padding: $smallSectionSpacing;
+}
+
+.hp_banner {
+    display: block;
+    height: 5rem;
+    width: 100%;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+.multi_row2_container {
+    margin: $smallSectionSpacing;    
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .cardWithShadow {
+        margin-bottom: 1rem;
+        padding: 1rem;
+        box-shadow: 0 0 10px rgba($color: #000000, $alpha: .05);
+    }
+}
+
+.our_players_player {
+    position: relative;
+
+    .bg {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .player_img {
+        width: 175px;
+        height: 200px;
+        object-fit: cover;
+        z-index: 1;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 1.5rem;
+    }
+
+    h2, h4, h5 {
+        color: $primaryRed;
+    } 
+
+    h2 {
+        font-weight: 800;
+        margin-bottom: .5rem;
+    }
+
+    h4, h5 {
+        font-weight: 700;
+    }
+
+    h4 {
+        margin-bottom: .5rem;
+    }
+
+    .desc {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .stats {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        position: relative;
+        padding: 0 .5rem;
+        width: max-content;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: rgba($color: #000000, $alpha: .05);
+            top: 1.1rem;
+            left: 0;
+        }
+
+        & > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+
+            span:nth-child(1) {
+                font-weight: 800;
+                text-transform: uppercase;
+                font-size: .625rem;
+            }
+
+            span:nth-child(2) {
+                font-size: .875rem;   
+            }
+        }
+    }
+}
+
+.liveMatches {
+    .cardWithShadow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 10rem;
+        margin-bottom: 0;
+    }
+}
+
+.hp_more_news {
+    .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 1rem;
+    }
+}
+
+.more_news_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.article {
+    .main_img {
+        height: 15.5rem;
+        object-fit: cover;
+        vertical-align: middle;
+    }
+
+    .content {
+        padding: 1rem;
+        border-top: 4px solid $primaryRed;
+
+        &.photogallery {
+            background: linear-gradient(180deg, #F30E2B, $primaryRed);
+            color: $white;
+            border-top: 4px solid $white;
+
+            .footer {
+                justify-content: space-between;
+
+                span:nth-child(1) {
+                    color: $white;
+                }
+                
+                span:nth-child(2) {
+                    font-size: 1rem;
+                    font-weight: 800;
+                }
+            }
+        }
+
+        h5 {
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 1.25;
+            margin-bottom: 1rem;
+        }
+
+        .footer {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            span:nth-child(1) {
+                color: $primaryRed;
+            }
+        } 
+    }
 }

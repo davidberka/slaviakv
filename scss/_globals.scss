@@ -58,9 +58,16 @@ body {
     color: $primaryRed;
     font-size: .875rem;
     font-weight: 700;
+    width: max-content;
 
     .arrow {
         margin-right: .5rem;
+    }
+
+    &.primary {
+        background: $white;
+        padding: .4rem .75rem;
+        border: 1px solid $primaryRed;
     }
 }
 
@@ -70,6 +77,46 @@ body {
     width: 100%;
     height: 100%;
     z-index: 10;
+}
+
+.table_container {
+    overflow-x: scroll;
+}
+
+.table {
+    border-collapse: collapse;
+
+    tr {
+        border-bottom: 1px solid rgba($color: $primaryRed, $alpha: .05);
+
+        &.highlighted {
+            color: $primaryRed;
+            font-weight: 700;
+        }
+
+        td {
+            padding: .5rem;
+            vertical-align: middle;
+            white-space: nowrap;
+
+            &:nth-child(2) {
+                padding: .25rem 0;
+            }
+
+            &:nth-child(6) {
+                font-weight: 700;
+            }
+
+            img {
+               min-height: 1.5rem; 
+               min-width: 1.5rem;
+               height: 1.5rem;
+               width: 1.5rem;
+               object-fit: contain;
+               vertical-align: middle;
+            }
+        }
+    }
 }
 
 img {
@@ -86,6 +133,10 @@ a {
     text-decoration: none;
 }
 
+span {
+    font-size: .875rem;
+}
+
 h1 {
     font-size: 1.75rem;
 }
@@ -96,6 +147,10 @@ h2 {
 
 h3 {
     font-size: 1.25rem;
+    color: $primaryRed;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 1rem;
 }
 
 h4 {
