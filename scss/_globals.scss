@@ -52,6 +52,56 @@ body {
     mask: url(../img/arrow.svg) no-repeat center;
 }
 
+.link_button {
+    display: flex;
+    align-items: center;
+    color: $primaryRed;
+    font-size: .875rem;
+    font-weight: 700;
+
+    .arrow {
+        margin-right: .5rem;
+    }
+}
+
+.stretched_link {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
 img {
     max-width: 100%;
+}
+
+li {
+    list-style: none;
+
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 1.75rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 1.125rem;
+}
+
+h5 {
+    font-size: 1rem;
 }
