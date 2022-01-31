@@ -312,3 +312,27 @@
         } 
     }
 }
+
+.hp_partners {
+    background: linear-gradient(90deg, $white, #F8F9FA);
+}
+
+.hp_partners_container {
+    padding: $smallSectionSpacing;
+    padding-bottom: 4.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    a {
+        display: block;
+        height: 6rem;
+        width: auto;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+}
