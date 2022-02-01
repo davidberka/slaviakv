@@ -95,3 +95,85 @@ header {
         }
     }
 }
+
+@media only screen and (min-width: 768px) {
+    header {
+        background: unset;
+    }
+    .header_nav {
+        width: 20rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .header_container {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .header_nav {
+        position: unset;
+        transform: unset;
+        flex-direction: row;
+        padding: 0;
+        background: unset;
+        width: unset;
+        gap: 4rem;
+
+        .social_icons {
+            margin-top: 0;
+        }
+    }
+
+    .nav_links {
+        flex-direction: row;
+    }
+
+    .burger {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .header_container {
+        .logo_container {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+
+            .club_name {
+                margin-top: .25rem;
+                display: block;
+
+                h2 {
+                    font-weight: 800;
+                }
+
+                h4 {
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    header {
+        height: 6rem;
+    }
+
+    .header_container {
+        width: 80%;
+
+        .logo_container {
+            img {
+                width: 6rem;
+                height: 6rem;
+            }
+
+            .club_name {
+                margin-top: .5rem;
+            }
+        }
+    }
+}

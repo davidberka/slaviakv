@@ -160,3 +160,19 @@ h4 {
 h5 {
     font-size: 1rem;
 }
+
+@media only screen and (min-width: 1440px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .link_button {
+        .primary {
+            padding: .5rem 1rem;
+        }
+    }
+}
