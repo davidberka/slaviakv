@@ -3,8 +3,8 @@ function menuHandler() {
     const slideNav = document.querySelector(".header_nav");
 
     burgerMenu.addEventListener("click", () => {
-    slideNav.classList.toggle("active");
-    burgerMenu.classList.toggle("active");
+        slideNav.classList.toggle("active");
+        burgerMenu.classList.toggle("active");
     });
 
     if (window.innerWidth < 1024) {

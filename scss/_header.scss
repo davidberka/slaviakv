@@ -66,6 +66,35 @@ header {
     }
 }
 
+.dropdown_menu {
+    z-index: 20;
+    display: none;
+    margin-top: .25rem;
+    background: $white;
+
+    &.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    li {
+        color: #000000;
+        width: 100%;
+        padding: .5rem;
+        font-weight: 500;
+        font-size: 1rem;
+        text-transform: capitalize;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid rgba($color: $primaryRed, $alpha: .05);
+        }
+
+        a {
+            transition: color .1s ease-out;
+        }
+    }
+}
+
 .burger {
     padding: .5rem;
     cursor: pointer;
@@ -119,6 +148,7 @@ header {
         background: unset;
         width: unset;
         gap: 4rem;
+        height: 100%;
 
         .social_icons {
             margin-top: 0;
@@ -127,6 +157,57 @@ header {
 
     .nav_links {
         flex-direction: row;
+        height: 100%;
+
+        li {
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                .dropdown_menu {
+                    transform: translateY(1.5rem);
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .dropdown_menu {
+        padding: .75rem 0;
+        position: absolute;
+        top: 3rem;
+        display: flex;
+        flex-direction: column;
+        transition: all .1s ease-out;
+        transform: translateY(2.5rem);
+        visibility: hidden;
+        opacity: 0;
+        background: $white;
+        color: #000000;
+        width: max-content;
+        border-bottom: 4px solid $primaryRed;
+
+        &::before {
+            width: 0; 
+            content: "";
+            position: absolute;
+            top: -8px;
+            left: 1rem;
+            height: 0; 
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 8px solid $white;
+        }
+
+        li {
+            padding: .5rem 1rem;
+
+            &:hover {
+                color: $primaryRed;
+            }
+        }
     }
 
     .burger {
@@ -175,5 +256,19 @@ header {
                 margin-top: .5rem;
             }
         }
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .header_container {
+        width: 70%;
+
+        .logo_container {
+            gap: 2rem;
+        }
+    }
+
+    .header_nav {
+        gap: 5rem;
     }
 }
