@@ -18,6 +18,10 @@
         &::before {
             opacity: .75;
         }
+
+        .arrow {
+            margin-right: .75rem;
+        }
     }
     
     &::before {
@@ -166,11 +170,12 @@
     flex-direction: column;
     gap: 2rem;
 
-    .cardWithShadow {
-        margin-bottom: 1rem;
-        padding: 1rem;
-        box-shadow: 0 0 10px rgba($color: #000000, $alpha: .05);
-    }
+}
+
+.cardWithShadow {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba($color: #000000, $alpha: .05);
 }
 
 .our_players_player {
@@ -282,6 +287,8 @@
 }
 
 .article {
+    position: relative;
+
     &:hover {
         .main_img {
             opacity: .8;

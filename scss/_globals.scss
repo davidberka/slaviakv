@@ -44,6 +44,18 @@ body {
     }
 }
 
+.tw_icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: $white;
+    -webkit-mask: url(../img/tw.svg) no-repeat center;
+    mask: url(../img/tw.svg) no-repeat center;
+    
+    &.red {
+        background-color: $primaryRed;
+    }
+}
+
 .arrow {
     width: .625rem;
     height: .5rem;
@@ -103,6 +115,12 @@ body {
             }
         }
     }
+
+    &.secondary {
+        .arrow {
+            transition: all .2s ease-out;
+        }
+    }
 }
 
 .stretched_link {
@@ -156,6 +174,18 @@ body {
                vertical-align: middle;
             }
         }
+    }
+}
+
+.bg_top_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+
+    img {
+        height: 100%;
     }
 }
 
@@ -214,5 +244,9 @@ h5 {
         .primary {
             padding: .5rem 1rem;
         }
+    }
+
+    .bg_top_container {
+        height: 6rem;
     }
 }
