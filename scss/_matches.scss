@@ -1,4 +1,4 @@
-.main_content.matches {
+.main_content.matches, .main_content.roster {
     padding: 2rem .75rem;
 
     .header {
@@ -24,6 +24,7 @@
         color: $primaryRed;
         margin-bottom: 1rem;
         text-transform: uppercase;
+        font-weight: 800;
     }
 }
 
@@ -54,7 +55,8 @@
 
             span {
                 font-size: 1rem;
-                color: rgb(180, 180, 180);
+                font-weight: 800;
+                color: rgb(202, 202, 202);
             }
         }
     }
@@ -83,11 +85,12 @@
         margin-bottom: 1rem;
         color: $primaryRed;
         text-transform: uppercase;
+        font-weight: 800;
     }
 }
 
 @media only screen and (min-width: 768px) {
-    .main_content.matches {
+    .main_content.matches, .main_content.roster {
         padding: 2rem 3rem;
     }
 

@@ -1071,6 +1071,7 @@ footer {
 .main_content > .content .annotation {
   font-weight: 700;
   margin-bottom: 1rem;
+  line-height: 1.438;
 }
 .main_content > .content .typo {
   margin-bottom: 1.5rem;
@@ -1139,9 +1140,6 @@ footer {
   gap: 2.5rem;
 }
 
-.aside_submenu {
-  width: 400px;
-}
 .aside_submenu .cardWithShadow {
   width: 100%;
 }
@@ -1172,6 +1170,10 @@ footer {
   }
   .aside .more_news_container {
     flex-direction: column;
+  }
+
+  .aside_submenu {
+    width: 400px;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -1265,17 +1267,17 @@ footer {
     width: 65%;
   }
 }
-.main_content.matches {
+.main_content.matches, .main_content.roster {
   padding: 2rem 0.75rem;
 }
-.main_content.matches .header {
+.main_content.matches .header, .main_content.roster .header {
   padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
 }
-.main_content.matches .header select {
+.main_content.matches .header select, .main_content.roster .header select {
   outline: none;
   padding: 0.5rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -1289,6 +1291,7 @@ footer {
   color: #E30613;
   margin-bottom: 1rem;
   text-transform: uppercase;
+  font-weight: 800;
 }
 
 .match_row_item {
@@ -1314,7 +1317,8 @@ footer {
 }
 .match_row_item .content .team_names span {
   font-size: 1rem;
-  color: #b4b4b4;
+  font-weight: 800;
+  color: #cacaca;
 }
 
 .matchType_filter_container {
@@ -1337,10 +1341,11 @@ footer {
   margin-bottom: 1rem;
   color: #E30613;
   text-transform: uppercase;
+  font-weight: 800;
 }
 
 @media only screen and (min-width: 768px) {
-  .main_content.matches {
+  .main_content.matches, .main_content.roster {
     padding: 2rem 3rem;
   }
 
@@ -1361,6 +1366,127 @@ footer {
   .match_row_item .content {
     flex: 1;
   }
+}
+.roster_categories_container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.roster_category > h2 {
+  text-transform: uppercase;
+  color: #E30613;
+  margin-bottom: 2rem;
+  font-weight: 800;
+}
+
+.players_container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.roster_player {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 307px;
+}
+.roster_player:hover .player_img_container::before {
+  visibility: visible;
+  opacity: 0.7;
+}
+.roster_player:hover .player_img_container h2 {
+  visibility: visible;
+}
+.roster_player .player_img_container {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  margin-right: 1rem;
+}
+.roster_player .player_img_container::before {
+  visibility: hidden;
+  opacity: 0;
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background: #E30613;
+  transition: opacity 0.2s ease-out;
+}
+.roster_player .player_img_container h2 {
+  visibility: hidden;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.roster_player .player_img_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.roster_player .content h4 {
+  color: #E30613;
+  font-weight: 800;
+}
+
+.aside_matches {
+  width: 100%;
+}
+
+.aside_match {
+  text-align: center;
+}
+.aside_match:nth-child(1) {
+  padding-bottom: 1rem;
+}
+.aside_match:nth-child(2) {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(227, 6, 19, 0.05);
+}
+.aside_match h1 {
+  font-weight: 800;
+  line-height: 0.9;
+  color: #E30613;
+  margin-bottom: 0.5rem;
+}
+.aside_match .main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.aside_match .main img {
+  height: 3rem;
+  width: 3rem;
+  object-fit: contain;
+}
+.aside_match .team_names {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+.aside_match .team_names h5 {
+  font-weight: 600;
+}
+.aside_match .team_names span {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #cacaca;
+}
+.aside_match .match_type {
+  color: #cacaca;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=styles.css.map */

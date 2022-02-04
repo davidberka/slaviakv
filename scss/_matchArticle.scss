@@ -37,6 +37,7 @@
         .annotation {
             font-weight: 700;
             margin-bottom: 1rem;
+            line-height: 1.438;
         }
     
         .typo {
@@ -118,8 +119,6 @@
 }
 
 .aside_submenu {
-    width: 400px;
-
     .cardWithShadow {
         width: 100%;
     }
@@ -161,6 +160,10 @@
             flex-direction: column;
         }
     }  
+
+    .aside_submenu {
+        width: 400px;
+    }
 }
 
 @media only screen and (min-width: 1024px) {

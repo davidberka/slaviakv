@@ -1,0 +1,143 @@
+.roster_categories_container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.roster_category {
+    & > h2 {
+        text-transform: uppercase;
+        color: $primaryRed;
+        margin-bottom: 2rem;
+        font-weight: 800;
+    }
+}
+
+.players_container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+.roster_player {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-width: 307px;
+
+    &:hover .player_img_container {
+        &::before {
+            visibility: visible;
+            opacity: .7;
+        }
+
+        h2 {
+            visibility: visible;
+        }
+    }
+
+    .player_img_container {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        margin-right: 1rem;
+
+        &::before {
+            visibility: hidden;
+            opacity: 0;
+            content: "";
+            position: absolute;
+            inset: 0;
+            height: 100%;
+            width: 100%;
+            background: $primaryRed;
+            transition: opacity .2s ease-out;
+        }
+
+        h2 {
+            visibility: hidden;
+            color: $white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .content {
+        h4 {
+            color: $primaryRed;
+            font-weight: 800;
+        }
+    }
+}
+
+.aside_matches {
+    width: 100%;
+}
+
+.aside_match {
+    text-align: center;
+
+    &:nth-child(1) {
+        padding-bottom: 1rem;
+    }
+    
+    &:nth-child(2) {
+        padding-top: 1rem;
+        border-top: 1px solid rgba($color: $primaryRed, $alpha: .05);
+    }
+
+    h1 {
+        font-weight: 800;    
+        line-height: .9;
+        color: $primaryRed;
+        margin-bottom: .5rem;
+    }
+
+    .main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+
+        img {
+            height: 3rem;
+            width: 3rem;
+            object-fit: contain;
+        }
+    }
+
+    .team_names {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .25rem;
+        margin-bottom: 1rem;
+
+        h5 {
+            font-weight: 600;
+        }
+
+        span {
+            font-size: 1rem;
+            font-weight: 800;
+            color: rgb(202, 202, 202);
+        }
+    }
+
+    .match_type {
+        color: rgb(202, 202, 202);
+        font-weight: 500;
+    }
+}
