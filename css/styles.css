@@ -182,6 +182,11 @@ span {
   font-size: 0.875rem;
 }
 
+p {
+  font-size: 1rem;
+  line-height: 1.438;
+}
+
 h1 {
   font-size: 1.75rem;
 }
@@ -1205,6 +1210,24 @@ footer {
 
   .matchArticle_photo_container {
     justify-content: space-between;
+  }
+}
+.text_content {
+  background: #fff;
+  padding: 2rem 0.75rem;
+  height: max-content;
+}
+.text_content h1 {
+  color: #E30613;
+  text-transform: uppercase;
+  line-height: 1.25;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .text_content {
+    padding: 2rem 3rem;
   }
 }
 

@@ -1,0 +1,19 @@
+.text_content {
+    background: $white;
+    padding: 2rem .75rem;
+    height: max-content;
+
+    h1 {
+        color: $primaryRed;
+        text-transform: uppercase;
+        line-height: 1.25;
+        font-weight: 800;
+        margin-bottom: 2rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .text_content {
+        padding: 2rem 3rem;
+    }
+}
