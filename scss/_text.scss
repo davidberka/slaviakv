@@ -1,5 +1,4 @@
-.text_content {
-    background: $white;
+.main_content.text {
     padding: 2rem .75rem;
     height: max-content;
 
@@ -13,7 +12,14 @@
 }
 
 @media only screen and (min-width: 768px) {
-    .text_content {
+    .main_content.text {
         padding: 2rem 3rem;
     }
 }
+
+@media only screen and (min-width: 1280px) {
+    .main_content.text {
+        width: 65%;
+    }
+}
+

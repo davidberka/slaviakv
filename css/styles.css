@@ -676,6 +676,8 @@ footer {
   margin-bottom: 1rem;
   padding: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  width: max-content;
+  max-width: 100%;
 }
 
 .our_players_player {
@@ -877,10 +879,6 @@ footer {
     padding-left: 1.5rem;
   }
 
-  .cardWithShadow {
-    width: max-content;
-  }
-
   .our_players_player {
     display: flex;
     align-items: center;
@@ -888,7 +886,7 @@ footer {
   }
   .our_players_player .player_img {
     margin-bottom: 0;
-    transform: translateY(1rem);
+    transform: translateY(0.8rem);
   }
 
   .liveMatches .cardWithShadow img {
@@ -1043,51 +1041,51 @@ footer {
   background: #F8F9FA;
 }
 
-.matchArticle_content {
+.main_content {
   background: #fff;
 }
-.matchArticle_content .header {
+.main_content > .header {
   padding: 2rem 0.75rem;
 }
-.matchArticle_content .header .desc {
+.main_content > .header .desc {
   display: flex;
   gap: 1.5rem;
   margin-bottom: 1rem;
 }
-.matchArticle_content .header h1 {
+.main_content > .header h1 {
   color: #E30613;
   text-transform: uppercase;
   line-height: 1.25;
   font-weight: 800;
 }
-.matchArticle_content .main_img {
+.main_content .main_img {
   display: block;
   width: 93%;
   margin: 0 auto;
   height: auto;
   object-fit: cover;
 }
-.matchArticle_content .content {
+.main_content > .content {
   padding: 2rem 0.75rem;
 }
-.matchArticle_content .content .annotation {
+.main_content > .content .annotation {
   font-weight: 700;
   margin-bottom: 1rem;
 }
-.matchArticle_content .content .typo {
+.main_content > .content .typo {
   margin-bottom: 1.5rem;
 }
-.matchArticle_content .footer {
+.main_content > .footer {
   border-top: 2px solid #F8F9FA;
   padding: 1rem 0.75rem;
   padding-bottom: 2rem;
 }
-.matchArticle_content .footer .share {
+.main_content > .footer .share {
   display: flex;
   align-items: center;
   gap: 0.25rem;
 }
-.matchArticle_content .footer .share span {
+.main_content > .footer .share span {
   display: block;
   margin-left: 0.5rem;
   text-transform: uppercase;
@@ -1141,11 +1139,31 @@ footer {
   gap: 2.5rem;
 }
 
+.aside_submenu {
+  width: 400px;
+}
+.aside_submenu .cardWithShadow {
+  width: 100%;
+}
+.aside_submenu .submenu_links li {
+  padding: 0.5rem 0;
+}
+.aside_submenu .submenu_links li.highlighted {
+  color: #E30613;
+  font-weight: 700;
+}
+.aside_submenu .submenu_links li:not(:last-child) {
+  border-bottom: 1px solid rgba(227, 6, 19, 0.05);
+}
+.aside_submenu .submenu_links li:last-child {
+  padding-bottom: 0;
+}
+
 @media only screen and (min-width: 768px) {
-  .matchArticle_content .header, .matchArticle_content .content, .matchArticle_content .footer {
+  .main_content > .header, .main_content > .content, .main_content > .footer {
     padding: 2rem 3rem;
   }
-  .matchArticle_content .main_img {
+  .main_content .main_img {
     height: 425px;
   }
 
@@ -1157,31 +1175,33 @@ footer {
   }
 }
 @media only screen and (min-width: 1024px) {
-  .matchAricle_main_container {
+  .mainAside_container {
     padding: 2rem 0.75rem;
     margin: 0 auto;
     width: 95%;
   }
 
-  .matchArticle_content .main_img {
+  .main_content .main_img {
     width: 80%;
   }
 }
 @media only screen and (min-width: 1280px) {
-  .matchAricle_main_container {
+  .mainAside_container {
     display: flex;
     gap: 2rem;
   }
 
-  .matchArticle_content {
+  .main_content {
     height: max-content;
+    width: 65%;
   }
-  .matchArticle_content .main_img {
+  .main_content .main_img {
     width: 100%;
   }
 
   .aside {
     padding: 0;
+    width: 35%;
   }
   .aside .hp_more_news {
     width: 100%;
@@ -1189,22 +1209,33 @@ footer {
   .aside .hp_more_news .article {
     width: 100%;
   }
+  .aside .our_players_player .player_img {
+    transform: translateY(1.5rem);
+  }
+  .aside .cardWithShadow {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .aside_submenu {
+    width: 100%;
+  }
 }
 @media only screen and (min-width: 1440px) {
-  .matchAricle_main_container {
+  .mainAside_container {
     width: 80%;
   }
 
-  .matchArticle_content .main_img {
+  .main_content .main_img {
     height: 480px;
   }
 }
 @media only screen and (min-width: 1920px) {
-  .matchAricle_main_container {
+  .mainAside_container {
     width: 70%;
   }
 
-  .matchArticle_content .main_img {
+  .main_content .main_img {
     height: 560px;
   }
 
@@ -1212,12 +1243,11 @@ footer {
     justify-content: space-between;
   }
 }
-.text_content {
-  background: #fff;
+.main_content.text {
   padding: 2rem 0.75rem;
   height: max-content;
 }
-.text_content h1 {
+.main_content.text h1 {
   color: #E30613;
   text-transform: uppercase;
   line-height: 1.25;
@@ -1226,8 +1256,110 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
-  .text_content {
+  .main_content.text {
     padding: 2rem 3rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .main_content.text {
+    width: 65%;
+  }
+}
+.main_content.matches {
+  padding: 2rem 0.75rem;
+}
+.main_content.matches .header {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.main_content.matches .header select {
+  outline: none;
+  padding: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.closest_match {
+  margin-bottom: 0.5rem;
+}
+.closest_match h2 {
+  color: #E30613;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.match_row_item {
+  padding: 1rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.match_row_item .logos {
+  display: none;
+}
+.match_row_item .content span {
+  color: #E30613;
+}
+.match_row_item .content .team_names {
+  margin-top: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.match_row_item .content .team_names h5 {
+  font-weight: 600;
+}
+.match_row_item .content .team_names span {
+  font-size: 1rem;
+  color: #b4b4b4;
+}
+
+.matchType_filter_container {
+  background: #E30613;
+  color: #fff;
+  display: flex;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+}
+.matchType_filter_container h5 {
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+.matchType_filter_container ul {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.matches_category > h5 {
+  margin-bottom: 1rem;
+  color: #E30613;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 768px) {
+  .main_content.matches {
+    padding: 2rem 3rem;
+  }
+
+  .match_row_item {
+    justify-content: unset;
+  }
+  .match_row_item .logos {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 2rem;
+  }
+  .match_row_item .logos img {
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: contain;
+  }
+  .match_row_item .content {
+    flex: 1;
   }
 }
 

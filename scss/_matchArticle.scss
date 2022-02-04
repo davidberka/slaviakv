@@ -2,10 +2,10 @@
     background: $gray;
 }
 
-.matchArticle_content {
+.main_content {
     background: $white;
 
-    .header {
+    & > .header {
         padding: 2rem .75rem;
 
         .desc {
@@ -31,7 +31,7 @@
         object-fit: cover;
     }
 
-    .content {
+    & > .content {
         padding: 2rem .75rem;
 
         .annotation {
@@ -45,7 +45,7 @@
     }
 
 
-    .footer {
+    & > .footer {
         border-top: 2px solid $gray;
         padding: 1rem .75rem;
         padding-bottom: 2rem;
@@ -117,9 +117,36 @@
     gap: 2.5rem;
 }
 
+.aside_submenu {
+    width: 400px;
+
+    .cardWithShadow {
+        width: 100%;
+    }
+
+    .submenu_links {
+       li {
+           padding: .5rem 0;
+
+           &.highlighted {
+               color: $primaryRed;
+               font-weight: 700;
+           }
+
+           &:not(:last-child) {
+              border-bottom: 1px solid rgba($color: $primaryRed, $alpha: .05);
+           }
+
+           &:last-child {
+               padding-bottom: 0;
+           }
+       } 
+    }
+}
+
 @media only screen and (min-width: 768px) {
-    .matchArticle_content {
-        .header, .content, .footer {
+    .main_content {
+        & > .header, & > .content, & > .footer {
             padding: 2rem 3rem;
         }
 
@@ -137,25 +164,26 @@
 }
 
 @media only screen and (min-width: 1024px) {
-    .matchAricle_main_container {
+    .mainAside_container {
         padding: 2rem .75rem;
         margin: 0 auto;
         width: 95%;
     }
 
-    .matchArticle_content .main_img {
+    .main_content .main_img {
         width: 80%;
     }
 }
 
 @media only screen and (min-width: 1280px) {
-    .matchAricle_main_container {
+    .mainAside_container {
         display: flex;
         gap: 2rem;
     }
 
-    .matchArticle_content {
+    .main_content {
         height: max-content;
+        width: 65%;
 
         .main_img {
             width: 100%;
@@ -164,6 +192,7 @@
 
     .aside {
         padding: 0;
+        width: 35%;
 
         .hp_more_news {
             width: 100%;
@@ -172,25 +201,38 @@
                 width: 100%;
             }
         }
+
+        .our_players_player .player_img {
+            transform: translateY(1.5rem);
+        }
+
+        .cardWithShadow {
+            width: 100%;
+            padding: 1.5rem;
+        }
+    }
+
+    .aside_submenu {
+        width: 100%;
     }
 }
 
 @media only screen and (min-width: 1440px) {
-    .matchAricle_main_container {
+    .mainAside_container {
         width: 80%;
     }
 
-    .matchArticle_content .main_img {
+    .main_content .main_img {
         height: 480px;
     }
 }
 
 @media only screen and (min-width: 1920px) {
-    .matchAricle_main_container {
+    .mainAside_container {
         width: 70%;
     }
 
-    .matchArticle_content {
+    .main_content {
         .main_img {
             height: 560px;
         }

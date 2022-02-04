@@ -1,0 +1,114 @@
+.main_content.matches {
+    padding: 2rem .75rem;
+
+    .header {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        select {
+            outline: none;
+            padding: .5rem;
+            border: 1px solid rgba($color: #000000, $alpha: .1);
+            box-shadow: 0 0 10px rgba($color: #000000, $alpha: .05);
+        }
+    }
+}
+
+.closest_match {
+    margin-bottom: .5rem;
+
+    h2 {
+        color: $primaryRed;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+    }
+}
+
+.match_row_item {
+    padding: 1rem .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logos {
+        display: none;
+    }
+
+    .content {
+        span {
+            color: $primaryRed;
+        }
+
+        .team_names {
+            margin-top: .25rem;
+            display: flex;
+            align-items: center;
+            gap: .25rem;
+
+            h5 {
+                font-weight: 600;
+            }
+
+            span {
+                font-size: 1rem;
+                color: rgb(180, 180, 180);
+            }
+        }
+    }
+}
+
+.matchType_filter_container {
+    background: $primaryRed;
+    color: $white;                
+    display: flex;
+    padding: .5rem;
+    margin-bottom: 2rem;
+
+    h5 {
+        font-weight: 500;   
+        margin-right: .5rem;
+    }
+
+    ul {
+        display: flex;
+        gap: .25rem;
+    }
+}
+
+.matches_category {
+    & > h5 {
+        margin-bottom: 1rem;
+        color: $primaryRed;
+        text-transform: uppercase;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .main_content.matches {
+        padding: 2rem 3rem;
+    }
+
+    .match_row_item {
+        justify-content: unset;
+
+        .logos {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            margin-right: 2rem;
+
+            img {
+                width: 2.5rem;
+                height: 2.5rem;
+                object-fit: contain;
+            }
+        }
+
+        .content {
+            flex: 1;
+        }
+    }
+}
