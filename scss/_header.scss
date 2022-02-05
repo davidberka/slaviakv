@@ -20,6 +20,11 @@ header {
             width: 5rem;
             height: 5rem;
             object-fit: contain;
+            transition: transform .2s ease-out;
+
+            &:hover {
+                transform: scale(1.05);
+            }
         }
 
         .club_name {
@@ -63,6 +68,11 @@ header {
         font-size: 1rem;
         font-weight: 800;
         text-transform: uppercase;
+        transition: color .2s ease-out;
+    }
+
+    & > li:hover {
+        color: #ecb9bb;
     }
 }
 

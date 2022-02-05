@@ -1,6 +1,11 @@
 footer {
     background: $primaryRed;
     color: $white;
+    position: relative;
+
+    .star_bg {
+        display: none;
+    }
 }
 
 .footer_container {
@@ -15,6 +20,11 @@ footer {
         top: -2rem;
         left: 50%;
         transform: translateX(-50%);
+        transition: transform .2s ease-out;
+
+        &:hover {
+            transform: translateX(-50%) scale(1.05);
+        }
     }
 
     .content {
@@ -22,6 +32,10 @@ footer {
         p {
             font-size: .875rem;
             font-weight: 700;
+
+            a:hover {
+                text-decoration: underline;
+            }
         }
 
         .social_icons {
@@ -48,6 +62,19 @@ footer {
             .social_icons {
                 margin: unset;
             }
+        }
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    footer {
+        .star_bg {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 20rem;
         }
     }
 }

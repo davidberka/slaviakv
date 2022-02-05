@@ -201,6 +201,14 @@ h3 {
   text-transform: uppercase;
   font-weight: 800;
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+h3 .star {
+  height: 1rem;
+  width: 1rem;
+  object-fit: contain;
+  margin-right: 0.5rem;
 }
 
 h4 {
@@ -250,6 +258,10 @@ header {
   width: 5rem;
   height: 5rem;
   object-fit: contain;
+  transition: transform 0.2s ease-out;
+}
+.header_container .logo_container img:hover {
+  transform: scale(1.05);
 }
 .header_container .logo_container .club_name {
   display: none;
@@ -288,6 +300,10 @@ header {
   font-size: 1rem;
   font-weight: 800;
   text-transform: uppercase;
+  transition: color 0.2s ease-out;
+}
+.nav_links > li:hover {
+  color: #ecb9bb;
 }
 
 .dropdown_menu {
@@ -467,6 +483,10 @@ header {
 footer {
   background: #E30613;
   color: #fff;
+  position: relative;
+}
+footer .star_bg {
+  display: none;
 }
 
 .footer_container {
@@ -481,6 +501,10 @@ footer {
   top: -2rem;
   left: 50%;
   transform: translateX(-50%);
+  transition: transform 0.2s ease-out;
+}
+.footer_container .logo:hover {
+  transform: translateX(-50%) scale(1.05);
 }
 .footer_container .content {
   margin-top: 0.5rem;
@@ -488,6 +512,9 @@ footer {
 .footer_container .content p {
   font-size: 0.875rem;
   font-weight: 700;
+}
+.footer_container .content p a:hover {
+  text-decoration: underline;
 }
 .footer_container .content .social_icons {
   display: flex;
@@ -510,6 +537,16 @@ footer {
   }
   .footer_container .content .social_icons {
     margin: unset;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  footer .star_bg {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 20rem;
   }
 }
 @media only screen and (min-width: 1440px) {
@@ -646,10 +683,6 @@ footer {
   gap: 0.5rem;
 }
 
-.multi {
-  border-bottom: 4px solid rgba(227, 6, 19, 0.05);
-}
-
 .multi_container {
   padding: 2.5rem 0.75rem;
 }
@@ -671,10 +704,12 @@ footer {
   flex-direction: column;
   gap: 2rem;
 }
+.multi_row2_container .link_button.primary {
+  margin-top: 1rem;
+}
 
 .cardWithShadow {
-  margin-bottom: 1rem;
-  padding: 1rem;
+  padding: 1.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   width: max-content;
   max-width: 100%;
@@ -822,6 +857,7 @@ footer {
 
 .hp_partners {
   background: linear-gradient(90deg, #fff, #F8F9FA);
+  border-top: 4px solid rgba(227, 6, 19, 0.05);
 }
 
 .hp_partners_container {
@@ -1042,7 +1078,9 @@ footer {
 }
 
 .main_content {
+  position: relative;
   background: #fff;
+  padding-bottom: 1.5rem;
 }
 .main_content > .header {
   padding: 2rem 0.75rem;
@@ -1079,7 +1117,6 @@ footer {
 .main_content > .footer {
   border-top: 2px solid #F8F9FA;
   padding: 1rem 0.75rem;
-  padding-bottom: 2rem;
 }
 .main_content > .footer .share {
   display: flex;
@@ -1091,6 +1128,13 @@ footer {
   margin-left: 0.5rem;
   text-transform: uppercase;
   font-weight: 800;
+}
+.main_content > .star {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
 }
 
 .matchArticle_photogallery > a {
@@ -1139,12 +1183,18 @@ footer {
   flex-direction: column;
   gap: 2.5rem;
 }
+.aside .link_button.primary {
+  margin-top: 1rem;
+}
 
 .aside_submenu .cardWithShadow {
   width: 100%;
 }
 .aside_submenu .submenu_links li {
   padding: 0.5rem 0;
+}
+.aside_submenu .submenu_links li:hover {
+  text-decoration: underline;
 }
 .aside_submenu .submenu_links li.highlighted {
   color: #E30613;
@@ -1159,10 +1209,13 @@ footer {
 
 @media only screen and (min-width: 768px) {
   .main_content > .header, .main_content > .content, .main_content > .footer {
-    padding: 2rem 3rem;
+    padding: 2.5rem 3rem;
   }
   .main_content .main_img {
     height: 425px;
+  }
+  .main_content > .star {
+    display: block;
   }
 
   .aside {
@@ -1237,8 +1290,15 @@ footer {
     width: 70%;
   }
 
+  .main_content {
+    width: 67%;
+  }
   .main_content .main_img {
     height: 560px;
+  }
+
+  .aside {
+    width: 33%;
   }
 
   .matchArticle_photo_container {
@@ -1247,6 +1307,7 @@ footer {
 }
 .main_content.text {
   padding: 2rem 0.75rem;
+  padding-bottom: 2.5rem;
   height: max-content;
 }
 .main_content.text h1 {
@@ -1259,7 +1320,8 @@ footer {
 
 @media only screen and (min-width: 768px) {
   .main_content.text {
-    padding: 2rem 3rem;
+    padding: 2.5rem 3rem;
+    padding-bottom: 2.5rem;
   }
 }
 @media only screen and (min-width: 1280px) {
@@ -1346,7 +1408,7 @@ footer {
 
 @media only screen and (min-width: 768px) {
   .main_content.matches, .main_content.roster {
-    padding: 2rem 3rem;
+    padding: 2.5rem 3rem;
   }
 
   .match_row_item {

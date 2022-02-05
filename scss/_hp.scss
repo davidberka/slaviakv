@@ -144,10 +144,6 @@
     }
 }
 
-.multi {
-    border-bottom: 4px solid rgba($color: $primaryRed, $alpha: .05);
-}
-
 .multi_container {
     padding: $smallSectionSpacing;
 }
@@ -170,11 +166,13 @@
     flex-direction: column;
     gap: 2rem;
 
+    .link_button.primary {
+        margin-top: 1rem;
+    }
 }
 
 .cardWithShadow {
-    margin-bottom: 1rem;
-    padding: 1rem;
+    padding: 1.5rem;
     box-shadow: 0 0 10px rgba($color: #000000, $alpha: .05);
     width: max-content;
     max-width: 100%;
@@ -349,6 +347,7 @@
 
 .hp_partners {
     background: linear-gradient(90deg, $white, #F8F9FA);
+    border-top: 4px solid rgba($color: $primaryRed, $alpha: .05);
 }
 
 .hp_partners_container {
