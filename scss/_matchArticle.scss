@@ -107,11 +107,18 @@
         align-items: center;
         gap: 1.5rem;
         margin-top: .5rem;
-        margin-bottom: 1rem;
+        margin-bottom: .75rem;
 
-        h3 {
-            margin-bottom: 0;
-            color: black;
+        h4 {
+            font-weight: 400;
+
+            &:nth-child(1) {
+                margin-bottom: .25rem;
+            }
+
+            &.highlighted {
+                font-weight: 700;
+            }
         }
 
         .team_names {
@@ -121,6 +128,10 @@
         img {
             display: none;
         }
+    }
+
+    h1 {
+        font-weight: 800;
     }
 }
 
@@ -233,6 +244,17 @@
 
     .main_content .main_img {
         height: 480px;
+    }
+
+    .report_result .row2 {
+        margin-top: 0rem;
+        margin-bottom: 0;
+        gap: 2rem;
+
+        img {
+            width: 5rem;
+            height: 5rem;
+        }
     }
 }
 

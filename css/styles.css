@@ -1250,17 +1250,25 @@ footer .star_bg {
   align-items: center;
   gap: 1.5rem;
   margin-top: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
-.report_result .row2 h3 {
-  margin-bottom: 0;
-  color: black;
+.report_result .row2 h4 {
+  font-weight: 400;
+}
+.report_result .row2 h4:nth-child(1) {
+  margin-bottom: 0.25rem;
+}
+.report_result .row2 h4.highlighted {
+  font-weight: 700;
 }
 .report_result .row2 .team_names {
   text-align: center;
 }
 .report_result .row2 img {
   display: none;
+}
+.report_result h1 {
+  font-weight: 800;
 }
 
 .matchArticle_photogallery > a {
@@ -1356,6 +1364,16 @@ footer .star_bg {
 
   .main_content .main_img {
     height: 480px;
+  }
+
+  .report_result .row2 {
+    margin-top: 0rem;
+    margin-bottom: 0;
+    gap: 2rem;
+  }
+  .report_result .row2 img {
+    width: 5rem;
+    height: 5rem;
   }
 }
 @media only screen and (min-width: 1536px) {
