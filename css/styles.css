@@ -125,6 +125,7 @@ body {
 }
 
 .table {
+  width: 100%;
   border-collapse: collapse;
 }
 .table tr {
@@ -470,7 +471,7 @@ header {
 }
 @media only screen and (min-width: 1920px) {
   .header_container {
-    width: 70%;
+    width: 72%;
   }
   .header_container .logo_container {
     gap: 2rem;
@@ -560,7 +561,7 @@ footer .star_bg {
 }
 @media only screen and (min-width: 1920px) {
   .footer_container {
-    width: 70%;
+    width: 72%;
   }
 }
 .bg_top {
@@ -727,8 +728,9 @@ footer .star_bg {
   object-fit: cover;
 }
 .our_players_player .player_img {
-  width: 175px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
   object-fit: cover;
   z-index: 1;
   position: relative;
@@ -922,7 +924,10 @@ footer .star_bg {
   }
   .our_players_player .player_img {
     margin-bottom: 0;
-    transform: translateY(0.8rem);
+    border-radius: unset;
+    width: 175px;
+    height: 200px;
+    transform: translateY(1.5rem);
   }
 
   .liveMatches .cardWithShadow img {
@@ -974,6 +979,10 @@ footer .star_bg {
   .multi_row2_container {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .our_players_player .player_img {
+    transform: translateY(0.8rem);
   }
 
   .multi_row2_container .cardWithShadow {
@@ -1057,20 +1066,26 @@ footer .star_bg {
 }
 @media only screen and (min-width: 1920px) {
   .top_articles_container {
-    width: 70%;
+    width: 72%;
     grid-template-columns: 1.3fr 0.7fr;
   }
 
   .hp_matches_container {
-    width: 65%;
+    width: 67%;
   }
 
   .multi_container, .hp_partners_container {
-    width: 70%;
+    width: 72%;
   }
 
   .multi_row2_container {
     justify-content: space-between;
+  }
+  .multi_row2_container > div {
+    width: calc(33% - 1.3333333333rem);
+  }
+  .multi_row2_container > div .cardWithShadow {
+    width: 100%;
   }
 }
 .aside {
@@ -1118,12 +1133,15 @@ footer .star_bg {
 @media only screen and (min-width: 1280px) {
   .aside {
     padding: 0;
-    flex: 0.35;
+    width: 37%;
   }
   .aside .hp_more_news {
     width: 100%;
   }
   .aside .hp_more_news .article {
+    width: 100%;
+  }
+  .aside .our_players, .aside .hp_standings, .aside .aside_submenu {
     width: 100%;
   }
   .aside .our_players_player .player_img {
@@ -1133,14 +1151,10 @@ footer .star_bg {
     width: 100%;
     padding: 1.5rem;
   }
-
-  .aside_submenu {
-    width: 100%;
-  }
 }
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1536px) {
   .aside {
-    flex: 0.33;
+    width: 33%;
   }
 }
 .mainAside_main {
@@ -1277,7 +1291,7 @@ footer .star_bg {
 
   .main_content {
     height: max-content;
-    flex: 0.65;
+    width: 63%;
   }
   .main_content .main_img {
     width: 100%;
@@ -1292,14 +1306,16 @@ footer .star_bg {
     height: 480px;
   }
 }
+@media only screen and (min-width: 1536px) {
+  .main_content {
+    width: 67%;
+  }
+}
 @media only screen and (min-width: 1920px) {
   .mainAside_container {
-    width: 70%;
+    width: 72%;
   }
 
-  .main_content {
-    flex: 0.67;
-  }
   .main_content .main_img {
     height: 560px;
   }

@@ -55,7 +55,7 @@
 @media only screen and (min-width: 1280px) {
     .aside {
         padding: 0;
-        flex: .35;
+        width: 37%;
 
         .hp_more_news {
             width: 100%;
@@ -63,6 +63,10 @@
             .article {
                 width: 100%;
             }
+        }
+
+        .our_players, .hp_standings, .aside_submenu {
+            width: 100%;
         }
 
         .our_players_player .player_img {
@@ -74,14 +78,10 @@
             padding: 1.5rem;
         }
     }
-
-    .aside_submenu {
-        width: 100%;
-    }
 }
 
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1536px) {
     .aside {
-        flex: .33;
+        width: 33%;
     }
 }
