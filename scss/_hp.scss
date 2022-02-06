@@ -509,7 +509,13 @@
 }
 
 @media only screen and (min-width: 1440px) {
-    .top_articles_container {
+    .top_articles_container, .multi_container, .hp_partners_container {
+        width: 85%;
+    }
+}
+
+@media only screen and (min-width: 1536px) {
+    .top_articles_container, .multi_container {
         width: 80%;
     }
 
@@ -526,10 +532,6 @@
                 height: 5rem;
             }
         }
-    }
-
-    .multi_container {
-        width: 80%;
     }
 
     .hp_banner {

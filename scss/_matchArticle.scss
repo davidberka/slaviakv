@@ -239,11 +239,21 @@
 
 @media only screen and (min-width: 1440px) {
     .mainAside_container {
+        width: 85%;
+    }
+}
+
+@media only screen and (min-width: 1536px) {
+    .mainAside_container {
         width: 80%;
     }
 
-    .main_content .main_img {
-        height: 480px;
+    .main_content {
+        width: 67%;
+
+        .main_img {
+            height: 480px;
+        }
     }
 
     .report_result .row2 {
@@ -255,12 +265,6 @@
             width: 5rem;
             height: 5rem;
         }
-    }
-}
-
-@media only screen and (min-width: 1536px) {
-    .main_content {
-        width: 67%;
     }
 }
 

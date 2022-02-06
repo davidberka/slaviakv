@@ -81,6 +81,12 @@ footer {
 
 @media only screen and (min-width: 1440px) {
     .footer_container {
+        width: 85%;
+    }
+}
+
+@media only screen and (min-width: 1536px) {
+    .footer_container {
         width: 80%;
 
         .logo {
