@@ -29,4 +29,23 @@ function menuHandler() {
     }
 }
 
+function playerTabsHandler() {
+    const tabLinks = document.querySelectorAll('.player_menu li');
+
+    tabLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            let current = document.querySelector(".player_menu li.active");
+            current.className = current.className.replace("active", "");
+            this.classList.add("active");
+            
+            linkId = link.getAttribute('data-id');
+            
+            let currentContainer = document.querySelector(".player_tab.active");
+            currentContainer.className = currentContainer.className.replace("active", "");
+            document.querySelector(`.player_tab[id="${linkId}"]`)?.classList.add('active');
+        })
+    })
+}
+
 menuHandler();
+playerTabsHandler();
