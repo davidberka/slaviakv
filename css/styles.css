@@ -865,6 +865,14 @@ footer .star_bg {
 .article .content.photogallery .footer span:nth-child(2) {
   font-size: 1rem;
   font-weight: 800;
+  display: flex;
+  align-items: center;
+}
+.article .content.photogallery .footer span:nth-child(2) .photo_icon {
+  width: 1rem;
+  height: 1rem;
+  object-fit: contain;
+  margin-right: 0.5rem;
 }
 .article .content h5 {
   font-weight: 800;
@@ -1939,11 +1947,13 @@ footer .star_bg {
   margin-bottom: 2rem;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.5rem;
 }
 .main_content.photogallery .findPhotogallery form {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.5rem;
 }
 

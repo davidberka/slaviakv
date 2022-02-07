@@ -319,6 +319,15 @@
                 span:nth-child(2) {
                     font-size: 1rem;
                     font-weight: 800;
+                    display: flex;
+                    align-items: center;
+
+                    .photo_icon {
+                        width: 1rem;
+                        height: 1rem;
+                        object-fit: contain;
+                        margin-right: .5rem;
+                    }
                 }
             }
         }
