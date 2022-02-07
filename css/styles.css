@@ -1191,11 +1191,6 @@ footer .star_bg {
     padding: 1.5rem;
   }
 }
-@media only screen and (min-width: 1536px) {
-  .aside {
-    width: 33%;
-  }
-}
 .mainAside_main {
   background: #F8F9FA;
 }
@@ -1405,9 +1400,6 @@ footer .star_bg {
     width: 80%;
   }
 
-  .main_content {
-    width: 67%;
-  }
   .main_content > .main_img {
     height: 480px;
   }
@@ -1452,11 +1444,6 @@ footer .star_bg {
   .main_content.text {
     padding: 2.5rem 3rem;
     padding-bottom: 2.5rem;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .main_content.text {
-    width: 63%;
   }
 }
 .main_content.matches, .main_content.roster, .main_content.partners {
@@ -1996,10 +1983,6 @@ footer .star_bg {
   }
 }
 @media only screen and (min-width: 1280px) {
-  .main_content.photogallery {
-    width: 63%;
-  }
-
   .photogalleries_container .article {
     width: calc(50% - 1rem);
   }
