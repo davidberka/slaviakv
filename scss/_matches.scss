@@ -1,4 +1,4 @@
-.main_content.matches, .main_content.roster {
+.main_content.matches, .main_content.roster, .main_content.partners {
     padding: 2rem .75rem;
 
     .header {
@@ -103,7 +103,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-    .main_content.matches, .main_content.roster {
+    .main_content.matches, .main_content.roster, .main_content.partners {
         padding: 2.5rem 3rem;
     }
 

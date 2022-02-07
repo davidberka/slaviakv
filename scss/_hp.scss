@@ -539,11 +539,18 @@
     }
 
     .hp_partners_container {
+        position: relative;
         width: 80%;
+        z-index: 2;
 
         a {
             height: 120px;
             width: 200px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 
